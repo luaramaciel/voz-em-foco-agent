@@ -4,6 +4,21 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
+def obter_google_api_key():
+    api_key = os.getenv("GOOGLE_API_KEY")
+    if not api_key:
+        try:
+            api_key = st.secrets["GOOGLE_API_KEY"]
+        except (FileNotFoundError, KeyError):
+            api_key = None
+
+    if not api_key:
+        raise RuntimeError(
+            "Configure GOOGLE_API_KEY no arquivo .env ou em Settings > Secrets do Streamlit."
+        )
+    return api_key
+
 # Importações das ferramentas do ecossistema LangChain
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -26,6 +41,8 @@ st.set_page_config(
 # ==============================================================================
 @st.cache_resource
 def inicializar_pipeline_rag():
+    google_api_key = obter_google_api_key()
+
     # ETAPA 1 & 2: Processamento e Extração de Conteúdo
     loader = PyPDFDirectoryLoader("./documentos")
     docs = loader.load()
@@ -38,7 +55,9 @@ def inicializar_pipeline_rag():
 
     # ETAPA 3: Indexação Vetorial
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/gemini-embedding-001", transport="rest"
+        model="models/gemini-embedding-001",
+        transport="rest",
+        google_api_key=google_api_key,
     )
     vectorstore = FAISS.from_documents(chunks, embeddings)
 
@@ -49,7 +68,10 @@ def inicializar_pipeline_rag():
 
     # ETAPA 5: GERAÇÃO E VALIDAÇÃO DE RESPOSTAS
     llm = ChatGoogleGenerativeAI(
-        model="gemini-3.6-flash", transport="rest", temperature=0.1
+        model="gemini-3.6-flash",
+        transport="rest",
+        temperature=0.1,
+        google_api_key=google_api_key,
     )
 
     system_prompt = (
