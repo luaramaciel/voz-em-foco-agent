@@ -2,6 +2,10 @@
 
 Um agente inteligente de atendimento e consulta aos documentos oficiais da escola de canto **Voz em Foco**. A aplicação utiliza a arquitetura **RAG (Retrieval-Augmented Generation)** para responder a dúvidas de alunos e colaboradores com base estrita nos manuais, políticas e guias da instituição.
 
+![Capa do Projeto](assets/print-agent.png)
+
+[▶️ Assistir ao vídeo da demonstração](URL_DO_SEU_VIDEO)
+
 ---
 
 ## 📌 Funcionalidades
@@ -105,6 +109,8 @@ streamlit run app.py
 ```
 Acesse a interface no navegador em http://localhost:8501.
 
+---
+
 ## 💬 Exemplos de Uso
 Consulta com Citação de Fonte
 
@@ -118,12 +124,15 @@ Fallback para Assuntos fora do Escopo
 
     Agente: "Desculpe, não encontrei essa informação nos nossos documentos oficiais. Por favor, entre em contato com a Secretaria do Voz em Foco pelo e-mail suporte@vozemfoco.com.br ou WhatsApp (11) 99999-8888."
 
+---
+
 ## 🎥 Demonstração em Vídeo
 
 Assista ao vídeo demonstrativo do funcionamento do Assistente Virtual, exibindo a busca semântica em tempo real, citação de fontes e a regra de segurança/fallback:
 
-▶️ Clique aqui para assistir à demonstração em vídeo
+[▶️ Clique aqui para assistir à demonstração em vídeo](https://drive.google.com/file/d/1jLPoghRnEEAU_216sQSIsVaSRtspFaee/view?usp=sharing)
 
+---
 
 ## 👩🏾‍💻 Autora do Projeto
 
