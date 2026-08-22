@@ -4,6 +4,8 @@ Um agente inteligente de atendimento e consulta aos documentos oficiais da escol
 
 ![Capa do Projeto](assets/print-agent.png)
 
+[🤖 Clique aqui para acessar o Agente](https://voz-em-foco-agent.streamlit.app/)
+
 ---
 
 ## 📌 Funcionalidades
