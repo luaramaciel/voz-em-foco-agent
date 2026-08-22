@@ -1,10 +1,11 @@
-# 🎙️ Assistente Virtual - Voz em Foco (RAG com Gemini & LangChain)
+# 🎙️ Voz em Foco Agent
 
 Um agente inteligente de atendimento e consulta aos documentos oficiais da escola de canto **Voz em Foco**. A aplicação utiliza a arquitetura **RAG (Retrieval-Augmented Generation)** para responder a dúvidas de alunos e colaboradores com base estrita nos manuais, políticas e guias da instituição.
 
+[🤖 Clique aqui para acessar o Agente](https://voz-em-foco-agent.streamlit.app/)
+
 ![Capa do Projeto](assets/print-agent.png)
 
-[🤖 Clique aqui para acessar o Agente](https://voz-em-foco-agent.streamlit.app/)
 
 ---
 
@@ -136,7 +137,7 @@ Assista ao vídeo demonstrativo do funcionamento do Assistente Virtual, exibindo
 
 ## 👩🏾‍💻 Autora do Projeto
 
-Desenvolvido por Luara Maciel como projeto prático de Inteligência Artificial e arquitetura RAG.
+Desenvolvido por Luara Maciel
 
     GitHub: @luaramaciel
 
