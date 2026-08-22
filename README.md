@@ -4,8 +4,6 @@ Um agente inteligente de atendimento e consulta aos documentos oficiais da escol
 
 ![Capa do Projeto](assets/print-agent.png)
 
-[▶️ Assistir ao vídeo da demonstração](URL_DO_SEU_VIDEO)
-
 ---
 
 ## 📌 Funcionalidades
