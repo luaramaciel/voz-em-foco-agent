@@ -19,6 +19,7 @@ def obter_google_api_key():
         )
     return api_key
 
+
 # Importações das ferramentas do ecossistema LangChain
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -31,9 +32,7 @@ from langchain_core.prompts import ChatPromptTemplate
 # ==============================================================================
 # CONFIGURAÇÃO DA PÁGINA (STREAMLIT)
 # ==============================================================================
-st.set_page_config(
-    page_title="Voz em Foco - Assistente Virtual", page_icon="🎙️", layout="centered"
-)
+st.set_page_config(page_title="Voz em Foco Agent", page_icon="🎙️", layout="centered")
 
 
 # ==============================================================================
@@ -112,15 +111,15 @@ rag_chain = inicializar_pipeline_rag()
 # ==============================================================================
 # ETAPA 6: IMPLANTAÇÃO E INTERFACE WEB (STREAMLIT)
 # ==============================================================================
-st.title("🎙️ Assistente Virtual - Voz em Foco")
-st.caption("🤖 Agente Oficial de Atendimento e Consulta aos Documentos")
+st.title("🎙️ Voz em Foco Agent")
+st.caption("🤖 Agente Oficial de Atendimento")
 
 # Inicialização do Histórico de Mensagens na Sessão
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Olá! Sou o assistente virtual da Voz em Foco. Como posso ajudar com dúvidas sobre os cursos, regras e horários?",
+            "content": "Olá! Sou o assistente virtual da Voz em Foco. Como posso ajudar?",
         }
     ]
 
